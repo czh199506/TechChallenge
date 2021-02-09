@@ -56,7 +56,7 @@ for i in range(cols):
 
     # Write the letter at the center of the rectangle
     # Scale the txt according to the length of the diagonal of the image
-    font_scale = 0.8/(300**2+200**2)**0.5*(width**2+height**2)**0.5
+    font_scale = 1.2/(300**2+200**2)**0.5*((xmax-xmin)**2+(ymax-ymin)**2)**0.5
     pos = (int((xmin + xmax) / 2.0), int((ymin + ymax) / 2.0))
     cv.putText(img, 'R', pos, cv.FONT_HERSHEY_SIMPLEX, font_scale, (0, 0, 255), 2, cv.LINE_AA)
 
